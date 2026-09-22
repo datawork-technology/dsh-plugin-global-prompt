@@ -12,6 +12,8 @@
 
 </div>
 
+> **Fork note (0.1.4)** — This fork of [chaserchan/dsh-plugin-global-prompt](https://github.com/chaserchan/dsh-plugin-global-prompt) ports the client half to current DeepSeek Harness. Upstream `lib/client.js` requires `@deepseek-ai/dsh-client-runtime/client`, a package that no longer exists in DSH `0.1.5-rc.2`; its `defineStore` now ships in `@deepseek-ai/dsh-client-store`, so the upstream bundle failed to materialize in the browser and the Settings row never appeared. The only changes here are that require (plus its call site), the matching `dsh.client.inject` entry, the version, and the repository URL. Host half, schema, prompt section and UI are unchanged.
+
 不想每次开新会话都重复交代同一段要求？写在这里，一次配置，全局生效。
 
 ## 为什么用它
